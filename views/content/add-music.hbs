@@ -1,0 +1,33 @@
+{{>head}}
+{{>navbar}}
+
+{{#if message}}
+  <div class="alert alert-{{message.type}}" role="alert">
+    {{message.message}}
+  </div>
+{{/if}}
+
+<div class="card">
+  <div class="card-header">
+    <h1>{{title}}</h1>
+  </div>
+  <div class="card-body">
+    <form action="" method="post" id="formLogin" enctype="multipart/form-data">
+      <label for="title">Title</label>
+      <br>
+      <input type="text" name="title" placeholder="input title" required>
+      <br>
+      <br>
+      <label for="music">music</label>
+      <br>
+      <input type="file" id="file" aria-label="file upload" name="music">
+      <br>
+  </div>
+      <div class="card-footer">
+        <button type="submit">Add</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+</div>
+
+{{> footer}}

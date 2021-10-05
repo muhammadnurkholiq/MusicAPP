@@ -1,0 +1,52 @@
+{{>head}}
+{{>navbar}}
+
+{{#if message}}
+  <div class="alert alert-{{message.type}}" role="alert">
+    {{message.message}}
+  </div>
+{{/if}}
+
+<div class="card">
+  <div class="card-header">
+    <h1>{{title}}</h1>
+  </div>
+  <div class="card-body">
+    <form action="" method="post" id="formLogin" enctype="multipart/form-data">
+      <label for="name">Name</label>
+      <br>
+      <input type="text" name="name" placeholder="input name" required>
+      <br>
+      <br>
+      <label for="start_career">career</label>
+      <br>
+      <input type="number" name="start_career" placeholder="input start career" required>
+      <br>
+      <br>
+      <label for="about">about</label>
+      <br>
+      <textarea name="about" placeholder="input about" required></textarea>
+      <br>
+      <br>
+      <div class="file-input-group text-start">
+        <input type="file" hidden id="file" aria-label="file upload" name="image" onchange="handleChange()">
+        <label for="file" class="input-image">Attach Thumbnail <img src="/static/icons/attach.svg" alt=""></label>
+      </div>
+      <div id="preview-thumbnail" class="text-start"></div>
+  </div>
+      <div class="card-footer">
+        <button type="submit">Add</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+</div>
+
+<script>
+  function handleChange() {
+    const previewElement = document.getElementById("preview-thumbnail")
+    const value = URL.createObjectURL(event.target.files[0])
+    previewElement.innerHTML = `<img src=${value} style="width: 250px;" class="mb-3">`
+  }
+</script>
+
+{{> footer}}

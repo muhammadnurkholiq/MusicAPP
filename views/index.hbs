@@ -1,0 +1,87 @@
+{{> head}}
+{{> navbar}}
+
+{{#if message}}
+  <div class="alert alert-{{message.type}}" role="alert">
+    {{message.message}}
+  </div>
+{{/if}}
+
+<!-- content -->
+<div class="container">
+    
+    <!-- artist -->
+    <div class="artist">
+            {{#if content}}
+                <h1>artist</h1>
+                <div class="artist-main">
+                <div class="card">
+                    <img class="card-img-top" src="{{content.0.image}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{content.0.name}}</h5>
+                        <button type="button" class="btn btn-login" data-toggle="modal" data-target="#artist">VIEW</button>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade modal-artist" id="artist" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-flex">
+                            <div class="modal-header">
+                                <img class="card-img-top m-auto" src="{{content.0.image}}" alt="Card image cap">
+                                <label for="">name : <span>{{content.0.name}}</span> </label>
+                                <label for="">Start Career : <span>{{content.0.start_career}}</span></label>
+                                <label for="">About : <span>{{content.0.about}}</span></label>
+                            </div>
+                            <div class="modal-body">
+                                <h1 class="modal-title" id="exampleModalLongTitle">Song</h1>
+                                <br>
+                                <div class="main-list">
+                                    <div class="main-flex">
+                                        <div class="title">
+                                            <h2 onclick="player();">{{content.0.title}}</h2>
+                                        </div>
+                                        <div class="action">
+                                            <a href=""><img src="/static/icons/trash.png" alt="" class="icon-trash"></a>
+                                        </div>
+                                    </div>
+                                    <br>
+                                </div>
+                                <div class="main-play" id="main-play">
+                                    <p id="main-play">
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- ending modal -->
+                {{else}}
+                <img src="/static/image/no-data.png" class="no-data" alt="" srcset="">
+            {{/if}}
+
+        </div>
+    </div>
+    <!-- ending artist -->
+
+</div>
+<!-- ending content -->
+
+<script>
+    function player(){
+        const media = document.getElementById('main-play');
+        media.innerHTML =  `
+        <audio controls>
+            <source src="{{content.0.music}}">
+        </audio>
+        `
+    }
+</script>
+
+{{> footer}}

@@ -1,0 +1,158 @@
+/* content */
+.artist, .playlist {
+    width: 100%;
+    margin-top: 5%;
+}
+
+h1 {
+    margin: 2% 0 2% 1%;
+    color: #95D600;
+    text-transform: uppercase;
+}
+
+.artist-main , .playlist-main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+}
+
+.card {
+    min-width: 150px;
+    max-width: 150px;
+    margin: 2%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.card .btn {
+    margin-left: -0.1%;
+    background-color: #95D600;
+    font-size: 80%;
+    font-weight: bold;
+}
+.card .btn:hover {
+    cursor: pointer;
+}
+
+.modal {
+    margin-left: -15%;
+    margin-top: 2%;
+}
+
+.modal-content {
+    width: 200%;
+}
+
+.modal-flex {
+    display: flex;
+    flex-direction: row;   
+}
+
+.modal-header {
+    background-color: white;
+    width: 50%;
+    height: 80vh;
+}
+
+.modal-body {
+    width: 50%;
+    background-image: url(/static/image/bg.jpg);
+    background-size: cover;
+    background-position-x: 48%;
+}
+
+.modal-artist .modal-header {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.modal-header img {
+    margin-top: -20%;
+}
+
+.modal-header label {
+    font-weight: 800;
+}
+
+.modal-header span {
+    font-weight: 500;
+}
+
+.modal-body .main-flex {
+    display: flex;
+    flex-direction: row;
+    overflow-y: auto;
+}
+
+.modal-body h1 {
+    font-size: 250%;
+    font-weight: 800;
+    margin-top: 10%;
+    color: white;
+    font-family: 'Merriweather', serif;
+    text-align: center;
+}
+
+.main-list {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 50vh;
+}
+
+.main-list .title {
+    width: 80%;
+    padding-left: 8%;
+    font-size: 20px;
+}
+
+.main-list .title:hover {
+    cursor: pointer;
+    color: yellow !important;
+}
+
+.main-list .action {
+    width: 20%;
+}
+
+.icon-trash {
+    width: 30px;
+    padding-top: -5px;
+}
+
+.main-list .title h2 {
+    color: white;
+    font-family: 'Spartan', sans-serif;
+    font-size: 120%;
+    font-weight: 600;
+}
+
+.main-list .action {
+    box-sizing: border-box;
+}
+
+.main-list .action a{
+    font-size: 120%;
+    margin-right: 10%;
+    color: #95D600 !important;
+}
+
+.main-play {
+    width: 100;
+    margin: auto;
+    text-align: center;
+    padding-top: 1%;
+}
+
+.main-list .action a:hover{
+    color: yellow !important;
+}
+
+.modal-footer button:hover {
+    cursor: pointer;
+    background-color: red;
+}
+
+/* ending content */

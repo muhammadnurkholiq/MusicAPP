@@ -1,0 +1,32 @@
+{{>head}}
+{{>navbar}}
+
+{{#if message}}
+  <div class="alert alert-{{message.type}}" role="alert">
+    {{message.message}}
+  </div>
+{{/if}}
+
+<div class="card">
+  <div class="card-header">
+    <h1>LOGIN</h1>
+  </div>
+  <div class="card-body">
+    <form action="" method="post" id="formLogin">
+      <label for="email">Email</label>
+      <br>
+      <input type="email" name="email" placeholder="input your email" required>
+      <br>
+      <br>
+      <label for="password">Password</label>
+      <br>
+      <input type="password" name="password" placeholder="input your password" required>
+  </div>
+      <div class="card-footer">
+        <button type="submit">Log In</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+</div>
+
+{{> footer}}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music APP</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.min.css">
+
+    <!-- mycss -->
+    <link rel="stylesheet" href="/public/css/style.css">
+
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">MUSIC APP</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link text-white" href="#">Home</a>
+                <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu text-center">
+                    <a class="dropdown-item" href="#">Add Genre</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Add Artist</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Add Music</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Add Playlist</a>
+                </div>
+                <p>|</p>
+                <a class="nav-item nav-link log" href="#">Log in</a>
+                <a class="nav-item nav-link log" href="#">Sign Up</a>
+            </div>
+            </div>
+        </div>
+    </nav>
+    <!-- ending navbar -->
+
+    <!-- content -->
+    <div class="container">
+        
+        <!-- artist -->
+        <div class="artist">
+            <h1>artist</h1>
+            <div class="artist-main">
+
+                <div class="card">
+                    <img class="card-img-top" src="/public/image/bruno mars.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <button type="button" class="btn btn-login" data-toggle="modal" data-target="#artist">VIEW</button>
+                    </div>
+                </div>
+                
+            </div>
+       
+            <!-- Modal -->
+            <div class="modal fade modal-artist" id="artist" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <img class="card-img-top m-auto" src="/public/image/bruno mars.jpg" alt="Card image cap">
+                        <label for="">name : </label>
+                        <p>Bruno Mars</p>
+                        <label for="">Start Career : </label>
+                        <p>2004</p>
+                        <label for="">About : </label>
+                        <p>Peter Gene Hernandez (lahir 8 Oktober 1985), dikenal secara profesional sebagai Bruno Mars, adalah seorang penyanyi-penulis lagu, multi-instrumentalis, produser rekaman, dan penari berkebangsaan Amerika Serikat.</p>
+                    </div>
+                    <div class="modal-body">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Song</h5>
+                        <ol>
+                            <li>Lazy Song</li>
+                        </ol>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- ending modal -->
+        </div>
+        <!-- ending artist -->
+
+        <!-- playlist -->
+        <div class="playlist">
+            <h1>playlist</h1>
+            <div class="playlist-main">
+                <div class="card">
+                    <img class="card-img-top" src="/public/image/bruno mars.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <button type="button" class="btn btn-login">VIEW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ending content -->
+
+    <!-- footer -->
+    <div class="footer">
+        <p>Created by Muhammad Nurkholiq © 2021</p>
+    </div>
+
+    <!-- jquery -->
+    <script src="/public/bootstrap/js/jquery-3.6.0.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="/public/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>
