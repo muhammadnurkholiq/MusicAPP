@@ -12,10 +12,11 @@
     <h1>{{title}}</h1>
   </div>
   <div class="card-body">
-    <form action="" method="post" enctype="multipart/form-data">
+    <form action="/content/edit/{{music.0.id}}" method="post" id="formedit" enctype="multipart/form-data">
       <label for="title">Title</label>
       <br>
-      <input type="text" name="title" placeholder="input title" required>
+      <input type="hidden" name="id" value="{{music.0.id}}">
+      <input type="text" name="title" placeholder="{{music_title}}" value="{{music.0.title}}">
       <br>
       <br>
       <label for="music">music</label>
@@ -29,5 +30,3 @@
       </div>
     </form>
 </div>
-
-{{> footer}}

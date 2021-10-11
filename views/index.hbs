@@ -39,10 +39,11 @@
                                 <div class="main-list">
                                     <div class="main-flex">
                                         <div class="title">
-                                            <h2 onclick="player();">{{content.0.title}}</h2>
+                                            <h2 onclick="player();" name="name">{{content.0.music_title}}</h2>
                                         </div>
                                         <div class="action">
-                                            <a href=""><img src="/static/icons/trash.png" alt="" class="icon-trash"></a>
+                                            <a href="/content/edit/{{content.0.music_id}}" class="btn btn-edit">Edit</a>
+                                            <a href="/content/delete/{{content.0.music_id}}" class="btn btn-delete">Delete</a>
                                         </div>
                                     </div>
                                     <br>

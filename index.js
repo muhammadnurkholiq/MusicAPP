@@ -55,11 +55,11 @@ app.use((req, res, next) => {
 });
 
 // render content artist
-app.get("/", function (req, res) { 
-    const query = "SELECT tb_artist.name, tb_artist.start_career, tb_artist.photo, tb_artist.about, tb_music.title, tb_music.music FROM tb_artist INNER JOIN tb_music";
+app.get("/", function (req, res) {
+    const query = "SELECT tb_artist.name, tb_artist.start_career, tb_artist.photo, tb_artist.about, tb_music.id AS music_id, tb_music.title AS music_title, tb_music.music FROM tb_artist INNER JOIN tb_music;";
     
     dbConnection.getConnection((err, conn) => {
-      if (err) throw err;
+      if (err)throw err;
   
       conn.query(query, (err, results) => {
         if (err) throw err;

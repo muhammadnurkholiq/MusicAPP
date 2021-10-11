@@ -56,13 +56,13 @@ body {
 .no-data {
     width: 40%;
     margin-left: 28%;
-    margin-bottom: -9%;
 }
 /* ending body */
 
 /* footer */
 .footer {
-    margin-top: 15%;
+    margin-top: 5%;
+    margin-bottom: 5px;
     color: white;
     text-align: center;
 }

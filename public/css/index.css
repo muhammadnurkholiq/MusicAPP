@@ -36,8 +36,8 @@ h1 {
 }
 
 .modal {
-    margin-left: -15%;
-    margin-top: 2%;
+    margin-left: -32%;
+    margin-top: 5px;
 }
 
 .modal-content {
@@ -88,7 +88,7 @@ h1 {
 }
 
 .modal-body h1 {
-    font-size: 250%;
+    font-size: 200%;
     font-weight: 800;
     margin-top: 10%;
     color: white;
@@ -99,13 +99,12 @@ h1 {
 .main-list {
     overflow-x: hidden;
     overflow-y: auto;
-    height: 50vh;
+    height: 60vh;
 }
 
 .main-list .title {
-    width: 80%;
+    width: 90%;
     padding-left: 8%;
-    font-size: 20px;
 }
 
 .main-list .title:hover {
@@ -113,14 +112,6 @@ h1 {
     color: yellow !important;
 }
 
-.main-list .action {
-    width: 20%;
-}
-
-.icon-trash {
-    width: 30px;
-    padding-top: -5px;
-}
 
 .main-list .title h2 {
     color: white;
@@ -131,13 +122,33 @@ h1 {
 
 .main-list .action {
     box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
 }
 
 .main-list .action a{
-    font-size: 120%;
-    margin-right: 10%;
-    color: #95D600 !important;
+    border: 1px solid black;
+    color: white;
 }
+
+.btn-edit {
+    background-color: rgb(25, 216, 57);
+}
+
+.btn-delete {
+    background-color: red;
+}
+
+.btn-edit:hover {
+    cursor: pointer;
+    background-color: rgb(0, 182, 30);
+}
+
+.btn-delete:hover {
+    cursor: pointer;
+    background-color: rgb(196, 0, 0);
+}
+
 
 .main-play {
     width: 100;
@@ -146,9 +157,6 @@ h1 {
     padding-top: 1%;
 }
 
-.main-list .action a:hover{
-    color: yellow !important;
-}
 
 .modal-footer button:hover {
     cursor: pointer;
