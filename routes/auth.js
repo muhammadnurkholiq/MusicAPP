@@ -63,6 +63,7 @@ router.post("/login", function (req, res) {
         return res.redirect("/");
       }
     });
+
     conn.release();
   });
 });
